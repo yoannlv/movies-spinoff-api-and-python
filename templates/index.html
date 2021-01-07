@@ -1,0 +1,30 @@
+<h1>Sélection de films</h1>
+
+<table border="1px">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Titre</th>
+            <th>Année</th>
+            <th>Réalisateur</th>
+            <th>Acteurs</th>
+            <th>Genre</th>
+            <th>Langue</th>
+            <th>Pays</th>
+        </tr>
+    </thead>
+    {% for movie in movies %}
+    <tbody>
+        <tr>
+            <td>{{movies['imdbId']}}</td>
+            <td>{{movies['Title']}}</td>
+            <td>{{movies['Year']}}</td>
+            <td>{{movies['Director']}}</td>
+            <td>{{movies['Actors']}}</td>
+            <td>{{movies['Genre']}}</td>
+            <td>{{movies['Language']}}</td>
+            <td>{{movies['Country']}}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
